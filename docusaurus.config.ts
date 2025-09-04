@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Quantum Platform',
   tagline: 'Intent-driven orchestration platform for enterprise-scale deployment',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/quantum-logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -15,15 +15,15 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://docs.quantum.centrex.ai',
+  url: 'https://quantum-platform.centrex.ai',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For custom domain, use '/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Dylan-Natter', // Usually your GitHub org/user name.
-  projectName: 'quantum-docs', // Usually your repo name.
+  organizationName: 'centrex-ai', // Usually your GitHub org/user name.
+  projectName: 'quantum-platform-docs', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -78,6 +78,8 @@ const config: Config = {
       logo: {
         alt: 'Quantum Platform Logo',
         src: 'img/quantum-logo.svg',
+        width: 32,
+        height: 32,
       },
       items: [
         {
@@ -100,7 +102,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/Dylan-Natter/quantum-platform',
+          href: 'https://github.com/centrex-ai/quantum-platform',
           label: 'GitHub',
           position: 'right',
         },
@@ -152,12 +154,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/Dylan-Natter/quantum-platform',
+              href: 'https://github.com/centrex-ai/quantum-platform',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Your Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Centrex AI. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

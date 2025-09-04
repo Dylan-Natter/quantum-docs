@@ -112,6 +112,6 @@ When making architectural decisions, consider:
 5. **Compliance**: Does this meet regulatory requirements?
 
 ## References
-- [Platform Blueprint Context](../blueprint/context.md)
-- [Build Steps and Procedures](../blueprint/build_steps.md)
-- [Architecture Decision Records](../blueprint/decision_records/)
+- [Platform Blueprint Context](/docs/blueprint/context)
+- [Build Steps and Procedures](/docs/blueprint/build_steps)
+- [Architecture Decision Records](/docs/blueprint/decision_records/ADR-0000-template)

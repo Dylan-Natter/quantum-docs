@@ -27,7 +27,7 @@ Before you begin, ensure you have:
 ## Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/Dylan-Natter/quantum-platform.git
+git clone https://github.com/centrex-ai/quantum-platform.git
 cd quantum-platform
 ```
 
@@ -206,24 +206,24 @@ Now that you have a working intent, explore the platform:
 Congratulations! You've successfully created and executed your first intent. Here's what to explore next:
 
 ### 1. Learn More About Intents
-- [Intent Development Guide](/docs/guides/intent-development)
-- [Workflow Orchestration](/docs/guides/workflow-orchestration)
-- [Module Development](/docs/guides/module-development)
+- [Architecture Overview](/docs/architecture/overview)
+- [Application Blueprint](/docs/blueprints/application-blueprint)
+- [API Reference](/docs/api-reference/overview)
 
 ### 2. Explore Advanced Features
-- [Multi-tenant Setup](/docs/guides/multi-tenant)
-- [Security Configuration](/docs/guides/security)
-- [Performance Optimization](/docs/guides/performance-optimization)
+- [Design System](/docs/blueprints/design-system)
+- [Development Guidelines](/docs/development/git-workflow)
+- [Blueprint Context](/docs/blueprint/context)
 
 ### 3. Deploy to Production
-- [Azure Deployment](/docs/guides/deployment/azure)
-- [Kubernetes Deployment](/docs/guides/deployment/kubernetes)
-- [Monitoring Setup](/docs/guides/monitoring)
+- [Build Steps](/docs/blueprint/build_steps)
+- [Decision Records](/docs/blueprint/decision_records/ADR-0000-template)
+- [Architect Preamble](/docs/snippets/architect_preamble)
 
 ### 4. Join the Community
-- [GitHub Discussions](https://github.com/Dylan-Natter/quantum-platform/discussions)
-- [Discord Community](https://discord.gg/quantum-platform)
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/quantum-platform)
+- [GitHub Repository](https://github.com/centrex-ai/quantum-platform)
+- [Documentation Issues](https://github.com/centrex-ai/quantum-platform-docs/issues)
+- [Project Discussions](https://github.com/centrex-ai/quantum-platform/discussions)
 
 ## Troubleshooting
 
@@ -257,10 +257,10 @@ make up
 ### Getting Help
 
 If you run into issues:
-1. Check the [Troubleshooting Guide](/docs/guides/troubleshooting)
-2. Search [GitHub Issues](https://github.com/Dylan-Natter/quantum-platform/issues)
-3. Ask in [Discord](https://discord.gg/quantum-platform)
-4. Create a [GitHub Issue](https://github.com/Dylan-Natter/quantum-platform/issues/new)
+1. Check the [Development Guidelines](/docs/development/git-workflow)
+2. Search [GitHub Issues](https://github.com/centrex-ai/quantum-platform/issues)
+3. Review the [Architecture Overview](/docs/architecture/overview)
+4. Create a [GitHub Issue](https://github.com/centrex-ai/quantum-platform/issues/new)
 
 ## What's Next?
 

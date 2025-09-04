@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
-title: Overview
-description: Quantum Platform - Intent-driven orchestration for enterprise-scale deployment
+title: Introduction
+description: Welcome to Quantum Platform - Intent-driven orchestration for enterprise-scale deployment
 ---
 
-# Quantum Platform
+# Welcome to Quantum Platform
 
 <div className="hero-section">
   <div className="hero-content">
@@ -13,10 +13,10 @@ description: Quantum Platform - Intent-driven orchestration for enterprise-scale
       Enterprise-scale platform that transforms how organizations build, deploy, and manage complex systems through declarative intent specifications.
     </p>
     <div className="hero-actions">
-      <a href="/docs/getting-started" className="button button--primary button--lg">
+      <a href="/docs/getting-started/quick-start" className="button button--primary button--lg">
         Get Started
       </a>
-      <a href="/docs/architecture" className="button button--secondary button--lg">
+      <a href="/docs/architecture/overview" className="button button--secondary button--lg">
         View Architecture
       </a>
     </div>
@@ -73,77 +73,7 @@ Instead of writing procedural code, you define declarative intents that describe
   </div>
 </div>
 
-## Architecture Overview
-
-```mermaid
-graph TB
-    subgraph "Client Layer"
-        Web[Web Application]
-        Mobile[Mobile Apps]
-        API[External APIs]
-    end
-    
-    subgraph "API Gateway"
-        Gateway[FastAPI Gateway]
-        Auth[Authentication]
-        Rate[Rate Limiting]
-    end
-    
-    subgraph "Core Services"
-        Intent[Intent Registry]
-        Orchestrator[Orchestrator]
-        Modules[Module Services]
-    end
-    
-    subgraph "Data Layer"
-        DB[(PostgreSQL)]
-        Cache[(Redis)]
-        Storage[Blob Storage]
-    end
-    
-    subgraph "Infrastructure"
-        AKS[Azure Kubernetes]
-        EventHub[Event Hubs]
-        Monitor[Monitoring]
-    end
-    
-    Web --> Gateway
-    Mobile --> Gateway
-    API --> Gateway
-    
-    Gateway --> Auth
-    Gateway --> Rate
-    Gateway --> Intent
-    Gateway --> Orchestrator
-    
-    Intent --> DB
-    Orchestrator --> Modules
-    Modules --> EventHub
-    
-    DB --> Cache
-    Modules --> Storage
-    
-    AKS --> Monitor
-```
-
-## Use Cases
-
-### Enterprise Integration
-- **Legacy System Modernization**: Gradually modernize legacy systems through intent-driven wrappers
-- **Multi-Cloud Orchestration**: Manage resources across multiple cloud providers
-- **Compliance Automation**: Automate compliance workflows and reporting
-
-### Development Teams
-- **Microservices Orchestration**: Coordinate complex microservices architectures
-- **CI/CD Pipeline Management**: Orchestrate build, test, and deployment processes
-- **Feature Flag Management**: Control feature rollouts across environments
-
-### Operations Teams
-- **Infrastructure Automation**: Automate infrastructure provisioning and management
-- **Incident Response**: Orchestrate incident response and recovery procedures
-- **Capacity Management**: Automatically scale resources based on demand
-
-## Getting Started
+## Quick Start
 
 Ready to transform your organization's approach to system orchestration?
 
@@ -151,21 +81,38 @@ Ready to transform your organization's approach to system orchestration?
   <h2>Start Building Today</h2>
   <p>Join the future of intent-driven development</p>
   <div className="cta-actions">
-    <a href="/docs/getting-started" className="button button--primary button--lg">
+    <a href="/docs/getting-started/quick-start" className="button button--primary button--lg">
       Quick Start Guide
     </a>
-    <a href="/docs/api-reference" className="button button--secondary button--lg">
+    <a href="/docs/api-reference/overview" className="button button--secondary button--lg">
       API Reference
     </a>
   </div>
 </div>
 
+## Documentation Structure
+
+### 🏗️ Architecture
+- [Architecture Overview](/docs/architecture/overview) - System design and components
+- [Application Blueprint](/docs/blueprints/application-blueprint) - Complete application design patterns
+- [Design System](/docs/blueprints/design-system) - UI/UX guidelines and components
+
+### 🚀 Getting Started
+- [Quick Start Guide](/docs/getting-started/quick-start) - Get up and running in minutes
+- [Development Setup](/docs/development/github-setup-guide) - Development environment setup
+- [Git Workflow](/docs/development/git-workflow) - Version control best practices
+
+### 📚 Reference
+- [API Reference](/docs/api-reference/overview) - Complete REST API documentation
+- [Blueprint Context](/docs/blueprint/context) - Project context and principles
+- [Decision Records](/docs/blueprint/decision_records/ADR-0000-template) - Architecture decisions
+
 ## Community & Support
 
 - **GitHub**: [quantum-platform](https://github.com/centrex-ai/quantum-platform)
-- **Discord**: Join our community discussions
-- **Documentation**: Comprehensive guides and references
-- **Support**: Enterprise support available
+- **Documentation**: [quantum-platform-docs](https://github.com/centrex-ai/quantum-platform-docs)
+- **Issues**: [Report Issues](https://github.com/centrex-ai/quantum-platform/issues)
+- **Discussions**: [Community Discussions](https://github.com/centrex-ai/quantum-platform/discussions)
 
 ---
 

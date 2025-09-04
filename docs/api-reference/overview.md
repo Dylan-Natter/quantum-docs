@@ -621,7 +621,7 @@ The complete API specification is available in OpenAPI 3.0 format:
 For API support and questions:
 
 - **Documentation**: [docs.quantum.centrex.ai](https://docs.quantum.centrex.ai)
-- **GitHub Issues**: [github.com/Dylan-Natter/quantum-platform/issues](https://github.com/Dylan-Natter/quantum-platform/issues)
+- **GitHub Issues**: [github.com/centrex-ai/quantum-platform/issues](https://github.com/centrex-ai/quantum-platform/issues)
 - **Email**: api-support@centrex.ai
 
 ---

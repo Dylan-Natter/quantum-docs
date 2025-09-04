@@ -1,8 +1,8 @@
 {
-  "name": "project-documentation",
+  "name": "quantum-platform-docs",
   "version": "1.0.0",
   "private": true,
-  "description": "Comprehensive documentation for developers, users, and operations teams",
+  "description": "Quantum Platform Documentation - Intent-driven orchestration for enterprise-scale deployment",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -66,7 +66,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/project-docs.git"
+    "url": "https://github.com/centrex-ai/quantum-platform-docs.git"
   },
   "keywords": [
     "documentation",
@@ -75,6 +75,6 @@
     "user-guides",
     "technical-documentation"
   ],
-  "author": "Your Organization",
+  "author": "Centrex AI",
   "license": "MIT"
 }
