@@ -15,14 +15,21 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   // Main documentation sidebar
   docsSidebar: [
-    'README',
     {
       type: 'category',
-      label: '🏗️ Architecture & System Design',
+      label: '📋 Blueprint & Planning',
       collapsed: false,
       items: [
-        'architecture/overview',
-        // Future: Components and Design Decisions sections
+        'blueprint/context',
+        'blueprint/build_steps',
+        {
+          type: 'category',
+          label: 'Decision Records',
+          collapsed: true,
+          items: [
+            'blueprint/decision_records/ADR-0000-template',
+          ],
+        },
       ],
     },
     {
@@ -30,38 +37,17 @@ const sidebars: SidebarsConfig = {
       label: '🛠️ Development',
       collapsed: false,
       items: [
-        'development/getting-started',
-        'development/coding-standards',
-        'development/workspace-organization',
-        // Future: git-workflow, testing, debugging, contributing
+        'development/git-workflow',
+        'development/github-setup-guide',
+        'development/remote-repository-setup',
       ],
     },
     {
       type: 'category',
-      label: '🔌 API Documentation',
+      label: '📝 Code Snippets',
       collapsed: false,
       items: [
-        'api/overview',
-        // Future: authentication, endpoints, webhooks, sdks, rate-limits, changelog
-      ],
-    },
-    {
-      type: 'category',
-      label: '👥 User Guides',
-      collapsed: false,
-      items: [
-        'user-guides/getting-started',
-        'user-guides/faq',
-        // Future: Features section and troubleshooting
-      ],
-    },
-    {
-      type: 'category',
-      label: '🚀 Operations',
-      collapsed: false,
-      items: [
-        'operations/overview',
-        // Future: deployment, monitoring, incident-response, backup-recovery, security
+        'snippets/architect_preamble',
       ],
     },
   ],

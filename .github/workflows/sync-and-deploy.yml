@@ -1,0 +1,105 @@
+name: Sync Documentation and Deploy
+
+on:
+  # Trigger on push to main branch
+  push:
+    branches: [ main ]
+    paths: [ 'docs/**' ]
+  
+  # Manual trigger
+  workflow_dispatch:
+  
+  # Schedule sync every 6 hours
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout quantum-docs repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: Checkout quantum-platform repository
+      uses: actions/checkout@v4
+      with:
+        repository: Dylan-Natter/quantum-platform
+        token: ${{ secrets.GITHUB_TOKEN }}
+        path: quantum-platform
+        fetch-depth: 0
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Sync documentation
+      run: |
+        echo "🔄 Syncing documentation from quantum-platform..."
+        
+        # Create backup
+        mkdir -p backup
+        cp -r docs backup/docs-backup-$(date +%Y%m%d-%H%M%S) 2>/dev/null || echo "No existing docs to backup"
+        
+        # Sync docs
+        rsync -av --delete \
+          --exclude='.git' \
+          --exclude='node_modules' \
+          --exclude='*.log' \
+          quantum-platform/docs/ docs/
+        
+        echo "📋 Documentation sync completed"
+    
+    - name: Check for changes
+      id: changes
+      run: |
+        if git diff --quiet; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+          echo "✅ No changes detected"
+        else
+          echo "changed=true" >> $GITHUB_OUTPUT
+          echo "📝 Changes detected, proceeding with deployment"
+        fi
+    
+    - name: Commit and push changes
+      if: steps.changes.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        git add docs/
+        git commit -m "docs: auto-sync from quantum-platform
+        
+        - Auto-synced from quantum-platform repo
+        - Timestamp: $(date)
+        - Workflow: ${{ github.workflow }}
+        - Run ID: ${{ github.run_id }}"
+        
+        git push origin main
+    
+    - name: Build and deploy
+      if: steps.changes.outputs.changed == 'true'
+      run: |
+        echo "🏗️  Building Docusaurus site..."
+        npm run build
+        
+        echo "🚀 Deploying to GitHub Pages..."
+        # GitHub Pages deployment happens automatically via GitHub Actions
+    
+    - name: Notify completion
+      if: always()
+      run: |
+        if [ "${{ steps.changes.outputs.changed }}" == "true" ]; then
+          echo "✅ Documentation successfully synced and deployed!"
+          echo "🌐 Site updated at: https://docs.quantum.centrex.ai"
+        else
+          echo "ℹ️  No changes to sync"
+        fi

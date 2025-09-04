@@ -88,7 +88,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/your-org/project-docs',
+          href: 'https://github.com/Dylan-Natter/quantum-platform',
           label: 'GitHub',
           position: 'right',
         },
@@ -101,16 +101,16 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
-              label: 'Getting Started',
-              to: '/docs/README',
+              label: 'Blueprint & Planning',
+              to: '/docs/blueprint/context',
             },
             {
-              label: 'Architecture',
-              to: '/docs/architecture/overview',
+              label: 'Development',
+              to: '/docs/development/git-workflow',
             },
             {
-              label: 'API Reference',
-              to: '/docs/api/overview',
+              label: 'Code Snippets',
+              to: '/docs/snippets/architect_preamble',
             },
           ],
         },
@@ -140,7 +140,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/Dylan-Natter/quantum-platform',
             },
           ],
         },
