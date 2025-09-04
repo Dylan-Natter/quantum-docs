@@ -1,55 +1,66 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
-/**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
 const sidebars: SidebarsConfig = {
   // Main documentation sidebar
   docsSidebar: [
+    'overview',
     {
       type: 'category',
-      label: '📋 Blueprint & Planning',
-      collapsed: false,
+      label: 'Architecture',
+      items: [
+        'architecture/overview',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Blueprints',
+      items: [
+        'blueprints/application-blueprint',
+        'blueprints/design-system',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Getting Started',
+      items: [
+        'getting-started/quick-start',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Development',
+      items: [
+        'development/github-setup-guide',
+        'development/remote-repository-setup',
+        'development/git-workflow',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Blueprint & Planning',
       items: [
         'blueprint/context',
         'blueprint/build_steps',
-        {
-          type: 'category',
-          label: 'Decision Records',
-          collapsed: true,
-          items: [
-            'blueprint/decision_records/ADR-0000-template',
-          ],
-        },
+        'blueprint/decision_records/ADR-0000-template',
       ],
     },
     {
       type: 'category',
-      label: '🛠️ Development',
-      collapsed: false,
-      items: [
-        'development/git-workflow',
-        'development/github-setup-guide',
-        'development/remote-repository-setup',
-      ],
-    },
-    {
-      type: 'category',
-      label: '📝 Code Snippets',
-      collapsed: false,
+      label: 'Code Snippets',
       items: [
         'snippets/architect_preamble',
       ],
     },
+  ],
+
+  // API Reference sidebar
+  apiSidebar: [
+    'api-reference/overview',
+  ],
+
+  // Guides sidebar
+  guidesSidebar: [
+    'getting-started/quick-start',
   ],
 };
 

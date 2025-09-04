@@ -1,0 +1,234 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2024-01-04T00:00:00Z",
+  "roles": [
+    {
+      "id": "architect",
+      "title": "Application Architect",
+      "owner": "AI Assistant",
+      "capacity": 1.0,
+      "kpis": [
+        "Architecture docs updated within 24h of changes",
+        "ADR decisions documented within 48h",
+        "Team roster accuracy > 95%",
+        "Task graph reflects current reality"
+      ],
+      "deliverables": [
+        "ARCHITECTURE.md",
+        "DECISIONS.md",
+        "team.roster.json",
+        "taskgraph.json"
+      ],
+      "spawn_if": "Architecture drift > 24h or new external dependency"
+    },
+    {
+      "id": "app_engineer_1",
+      "title": "App Engineer (Backend)",
+      "owner": "TBD",
+      "capacity": 1.0,
+      "kpis": [
+        "Feature delivery on time",
+        "Test coverage > 80%",
+        "Code review response < 24h",
+        "Bug resolution < 48h"
+      ],
+      "deliverables": [
+        "API endpoints",
+        "Database models",
+        "Business logic",
+        "Unit tests"
+      ],
+      "spawn_if": "WIP > 8 issues or cycle time > 3 days"
+    },
+    {
+      "id": "app_engineer_2",
+      "title": "App Engineer (Frontend)",
+      "owner": "TBD",
+      "capacity": 1.0,
+      "kpis": [
+        "UI components delivered on time",
+        "Accessibility compliance (AA+)",
+        "Performance budget met",
+        "Cross-browser compatibility"
+      ],
+      "deliverables": [
+        "React components",
+        "UI/UX implementation",
+        "Integration tests",
+        "Performance optimization"
+      ],
+      "spawn_if": "WIP > 8 issues or cycle time > 3 days"
+    },
+    {
+      "id": "sre_platform",
+      "title": "SRE/Platform Engineer",
+      "owner": "TBD",
+      "capacity": 0.5,
+      "kpis": [
+        "Uptime > 99.9%",
+        "MTTR < 15 minutes",
+        "Deployment success > 95%",
+        "Infrastructure costs within budget"
+      ],
+      "deliverables": [
+        "CI/CD pipelines",
+        "Infrastructure as Code",
+        "Monitoring dashboards",
+        "Runbooks"
+      ],
+      "spawn_if": "Incident frequency > 2/week or deployment failures > 5%"
+    },
+    {
+      "id": "security_engineer",
+      "title": "Security Engineer",
+      "owner": "TBD",
+      "capacity": 0.3,
+      "kpis": [
+        "Zero critical vulnerabilities",
+        "Security scan pass rate > 95%",
+        "Threat model updated quarterly",
+        "Compliance audit readiness"
+      ],
+      "deliverables": [
+        "Threat models",
+        "Security policies",
+        "Vulnerability assessments",
+        "Compliance reports"
+      ],
+      "spawn_if": "PII detected or compliance scope change"
+    },
+    {
+      "id": "qa_automation",
+      "title": "QA/Test Automation Engineer",
+      "owner": "TBD",
+      "capacity": 0.5,
+      "kpis": [
+        "Test coverage > 80%",
+        "E2E test pass rate > 95%",
+        "Test execution time < 10 minutes",
+        "Bug escape rate < 5%"
+      ],
+      "deliverables": [
+        "Test plans",
+        "Automated test suites",
+        "Test data management",
+        "Quality reports"
+      ],
+      "spawn_if": "Test coverage < 70% or bug escape rate > 10%"
+    },
+    {
+      "id": "docs_knowledge",
+      "title": "Docs/Knowledge Engineer",
+      "owner": "TBD",
+      "capacity": 0.2,
+      "kpis": [
+        "Documentation accuracy > 95%",
+        "Runbook completeness",
+        "Knowledge base searchability",
+        "Developer onboarding time < 2 hours"
+      ],
+      "deliverables": [
+        "API documentation",
+        "Runbooks",
+        "Developer guides",
+        "Knowledge base"
+      ],
+      "spawn_if": "Documentation drift > 48h or onboarding complaints"
+    },
+    {
+      "id": "creative_director",
+      "title": "Creative Director (UI/Brand)",
+      "owner": "TBD",
+      "capacity": 0.0,
+      "kpis": [
+        "Brand consistency score > 90%",
+        "Design system adoption > 80%",
+        "User satisfaction > 4.5/5",
+        "Accessibility compliance (AA+)"
+      ],
+      "deliverables": [
+        "Brand guidelines",
+        "Design system",
+        "UI mockups",
+        "User experience flows"
+      ],
+      "spawn_if": "Design language request or brand refresh needed"
+    },
+    {
+      "id": "functional_designer",
+      "title": "Functional Designer / Capability Architect",
+      "owner": "TBD",
+      "capacity": 0.0,
+      "kpis": [
+        "Capability map accuracy > 95%",
+        "User journey completeness",
+        "Feature prioritization alignment",
+        "Competitive analysis depth"
+      ],
+      "deliverables": [
+        "Capability maps",
+        "User journey maps",
+        "Feature specifications",
+        "Competitive analysis"
+      ],
+      "spawn_if": "Capability mapping request or major feature planning"
+    },
+    {
+      "id": "design_systems_lead",
+      "title": "Design Systems Lead",
+      "owner": "TBD",
+      "capacity": 0.0,
+      "kpis": [
+        "Component library completeness > 90%",
+        "Design token consistency",
+        "Accessibility compliance (AA+)",
+        "Developer adoption > 80%"
+      ],
+      "deliverables": [
+        "Component library",
+        "Design tokens",
+        "Style guide",
+        "Implementation guidelines"
+      ],
+      "spawn_if": "Design system creation or major UI overhaul"
+    },
+    {
+      "id": "prototyper",
+      "title": "Prototyper",
+      "owner": "TBD",
+      "capacity": 0.0,
+      "kpis": [
+        "Prototype fidelity > 90%",
+        "User testing completion",
+        "Feedback integration rate > 80%",
+        "Technical feasibility validation"
+      ],
+      "deliverables": [
+        "Interactive prototypes",
+        "User testing reports",
+        "Technical specifications",
+        "Implementation guides"
+      ],
+      "spawn_if": "Prototype request for signature flows or complex interactions"
+    },
+    {
+      "id": "ai_ux_designer",
+      "title": "AI/UX Designer",
+      "owner": "TBD",
+      "capacity": 0.0,
+      "kpis": [
+        "AI interaction patterns defined",
+        "Conversational UX guidelines",
+        "Safety evaluation framework",
+        "User trust metrics > 4.0/5"
+      ],
+      "deliverables": [
+        "AI interaction patterns",
+        "Conversational UX guidelines",
+        "Safety evaluation framework",
+        "Trust and transparency guidelines"
+      ],
+      "spawn_if": "AI/ML feature development or conversational interface design"
+    }
+  ]
+}

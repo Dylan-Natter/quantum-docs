@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Quantum Project Documentation',
-  tagline: 'Comprehensive documentation for the Quantum development platform - developers, users, and operations teams',
+  title: 'Quantum Platform',
+  tagline: 'Intent-driven orchestration platform for enterprise-scale deployment',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -74,10 +74,10 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Project Docs',
+      title: 'Quantum Platform',
       logo: {
-        alt: 'Project Logo',
-        src: 'img/logo.svg',
+        alt: 'Quantum Platform Logo',
+        src: 'img/quantum-logo.svg',
       },
       items: [
         {
@@ -85,6 +85,18 @@ const config: Config = {
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Documentation',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'apiSidebar',
+          position: 'left',
+          label: 'API Reference',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'guidesSidebar',
+          position: 'left',
+          label: 'Guides',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
