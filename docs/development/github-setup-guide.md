@@ -1,5 +1,7 @@
 # GitHub Setup Guide for Quantum Platform
 
+<!-- Last updated: $(date) - Testing automation -->
+
 ## Prerequisites
 
 1. **GitHub Account**: You need a GitHub account
