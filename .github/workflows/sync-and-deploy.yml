@@ -94,6 +94,14 @@ jobs:
         echo "🚀 Deploying to GitHub Pages..."
         # GitHub Pages deployment happens automatically via GitHub Actions
     
+    - name: Deploy to GitHub Pages
+      if: steps.changes.outputs.changed == 'true'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
+        cname: docs.quantum.centrex.ai
+    
     - name: Notify completion
       if: always()
       run: |
