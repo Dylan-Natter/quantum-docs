@@ -234,4 +234,4 @@ This documentation is licensed under the MIT License. See the [LICENSE](LICENSE)
 
 ---
 
-*For questions or suggestions, please [open an issue](https://github.com/your-org/project-docs/issues) or [contact us](mailto:docs@your-project.com).*
+*For questions or suggestions, please [open an issue](https://github.com/your-org/project-docs/issues) or [contact us](mailto:docs@your-project.com).*# GitHub Pages Enabled
