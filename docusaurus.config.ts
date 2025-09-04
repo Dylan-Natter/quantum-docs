@@ -15,14 +15,14 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://docs.quantum-project.com',
+  url: 'https://dylan-natter.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/quantum-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'centrex-ai', // Usually your GitHub org/user name.
+  organizationName: 'Dylan-Natter', // Usually your GitHub org/user name.
   projectName: 'quantum-docs', // Usually your repo name.
 
   onBrokenLinks: 'warn',
