@@ -1,17 +1,19 @@
-name: Sync Documentation and Deploy
+name: Manual Documentation Sync
 
 on:
-  # Trigger on push to main branch
-  push:
-    branches: [ main ]
-    paths: [ 'docs/**' ]
-  
-  # Manual trigger
+  # Manual trigger only
   workflow_dispatch:
-  
-  # Schedule sync every 6 hours
-  schedule:
-    - cron: '0 */6 * * *'
+    inputs:
+      source_commit:
+        description: 'Source commit hash (optional)'
+        required: false
+        default: 'main'
+
+# Set permissions for the workflow
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   sync-and-deploy:
@@ -21,7 +23,6 @@ jobs:
     - name: Checkout quantum-docs repository
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 0
     
     - name: Checkout quantum-platform repository
@@ -30,6 +31,7 @@ jobs:
         repository: Dylan-Natter/quantum-platform
         path: quantum-platform
         fetch-depth: 0
+        ref: ${{ github.event.inputs.source_commit || 'main' }}
     
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -75,31 +77,34 @@ jobs:
         git config --local user.name "GitHub Action"
         
         git add docs/
-        git commit -m "docs: auto-sync from quantum-platform
+        git commit -m "docs: manual sync from quantum-platform
         
-        - Auto-synced from quantum-platform repo
+        - Manual sync triggered from GitHub Actions
+        - Source: quantum-platform@${{ github.event.inputs.source_commit || 'main' }}
         - Timestamp: $(date)
         - Workflow: ${{ github.workflow }}
         - Run ID: ${{ github.run_id }}"
         
         git push origin main
     
-    - name: Build and deploy
+    - name: Setup Pages
       if: steps.changes.outputs.changed == 'true'
-      run: |
-        echo "🏗️  Building Docusaurus site..."
-        npm run build
-        
-        echo "🚀 Deploying to GitHub Pages..."
-        # GitHub Pages deployment happens automatically via GitHub Actions
+      uses: actions/configure-pages@v4
+    
+    - name: Build
+      if: steps.changes.outputs.changed == 'true'
+      run: npm run build
+    
+    - name: Upload artifact
+      if: steps.changes.outputs.changed == 'true'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./build
     
     - name: Deploy to GitHub Pages
       if: steps.changes.outputs.changed == 'true'
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
-        cname: docs.quantum.centrex.ai
+      id: deployment
+      uses: actions/deploy-pages@v4
     
     - name: Notify completion
       if: always()
