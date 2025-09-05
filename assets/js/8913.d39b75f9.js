@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkquantum_platform_docs=self.webpackChunkquantum_platform_docs||[]).push([[8913],{8913:(u,s,a)=>{a.r(s)}}]);

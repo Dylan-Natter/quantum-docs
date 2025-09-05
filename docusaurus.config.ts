@@ -1,0 +1,187 @@
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+const config: Config = {
+  title: 'Quantum Platform',
+  tagline: 'Intent-driven orchestration platform for enterprise-scale deployment',
+  favicon: 'img/quantum-logo.svg',
+
+  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  future: {
+    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
+
+  // Set the production url of your site here
+  url: 'https://quantum-platform.centrex.ai',
+  // Set the /<baseUrl>/ pathname under which your site is served
+  // For custom domain, use '/'
+  baseUrl: '/',
+
+  // GitHub pages deployment config.
+  // If you aren't using GitHub pages, you don't need these.
+  organizationName: 'Dylan-Natter', // Usually your GitHub org/user name.
+  projectName: 'quantum-docs', // Usually your repo name.
+
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
+
+  // Even if you don't use internationalization, you can use this field to set
+  // useful metadata like html lang. For example, if your site is Chinese, you
+  // may want to replace "en" with "zh-Hans".
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+
+  presets: [
+    [
+      'classic',
+      {
+        docs: {
+          sidebarPath: './sidebars.ts',
+          routeBasePath: 'docs',
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          editUrl:
+            'https://github.com/your-org/project-docs/tree/main/',
+        },
+        theme: {
+          customCss: './src/css/custom.css',
+        },
+      } satisfies Preset.Options,
+    ],
+  ],
+
+  themeConfig: {
+    // Replace with your project's social card
+    image: 'img/docusaurus-social-card.jpg',
+    navbar: {
+      title: 'Quantum Platform',
+      logo: {
+        alt: 'Quantum Platform Logo',
+        src: 'img/quantum-logo.svg',
+        width: 32,
+        height: 32,
+      },
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'docsSidebar',
+          position: 'left',
+          label: 'Documentation',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'apiSidebar',
+          position: 'left',
+          label: 'API Reference',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'guidesSidebar',
+          position: 'left',
+          label: 'Guides',
+        },
+        {
+          to: '/docs/team/org-chart',
+          label: 'Team',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/Dylan-Natter/quantum-platform',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Documentation',
+          items: [
+            {
+              label: 'Blueprint & Planning',
+              to: '/docs/blueprint/context',
+            },
+            {
+              label: 'Development',
+              to: '/docs/development/git-workflow',
+            },
+            {
+              label: 'Code Snippets',
+              to: '/docs/snippets/architect_preamble',
+            },
+          ],
+        },
+        {
+          title: 'Platform',
+          items: [
+            {
+              label: 'Architecture Overview',
+              href: '/docs/architecture/overview',
+            },
+            {
+              label: 'API Reference',
+              href: '/docs/api-reference/overview',
+            },
+            {
+              label: 'Quick Start',
+              href: '/docs/getting-started/quick-start',
+            },
+          ],
+        },
+        {
+          title: 'Company',
+          items: [
+            {
+              label: 'centrex.AI',
+              href: 'https://centrex.ai',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/Dylan-Natter/quantum-platform',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} centrex.AI. All rights reserved.`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'json', 'yaml'],
+    },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: 'YOUR_APP_ID',
+      // Public API key: it is safe to commit it
+      apiKey: 'YOUR_SEARCH_API_KEY',
+      indexName: 'your-index-name',
+      // Optional: see doc section below
+      contextualSearch: true,
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: 'external\\.com|domain\\.com',
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      replaceSearchResultPathname: {
+        from: '/docs/', // or as RegExp: /\/docs\//
+        to: '/',
+      },
+      // Optional: Algolia search parameters
+      searchParameters: {},
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+  } satisfies Preset.ThemeConfig,
+
+};
+
+export default config;

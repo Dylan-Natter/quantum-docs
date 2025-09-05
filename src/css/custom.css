@@ -1,0 +1,524 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #0066CC;
+  --ifm-color-primary-dark: #004499;
+  --ifm-color-primary-darker: #003366;
+  --ifm-color-primary-darkest: #002244;
+  --ifm-color-primary-light: #3388DD;
+  --ifm-color-primary-lighter: #4D99EE;
+  --ifm-color-primary-lightest: #66AAFF;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Improve contrast for better readability */
+  --ifm-color-content: #e2e8f0;
+  --ifm-color-content-secondary: #a0aec0;
+  --ifm-heading-color: #f7fafc;
+  --ifm-font-color-base: #e2e8f0;
+  --ifm-navbar-link-color: #e2e8f0;
+  --ifm-footer-link-color: #a0aec0;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  background: linear-gradient(135deg, #0066CC 0%, #004499 100%);
+  color: white;
+  padding: 6rem 0;
+  margin: -2rem -1rem 4rem -1rem;
+  border-radius: 0 0 1rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.hero-actions .button {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-actions .button--primary {
+  background: white;
+  color: #0066CC;
+  border: 2px solid white;
+}
+
+.hero-actions .button--primary:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.hero-actions .button--secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.hero-actions .button--secondary:hover {
+  background: white;
+  color: #0066CC;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #00CC66;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Features Grid Styling */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-color: #0066CC;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: #0066CC;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* CTA Section Styling */
+.cta-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 4rem 2rem;
+  margin: 4rem -1rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0066CC;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-actions .button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-actions .button--primary {
+  background: #0066CC;
+  color: white;
+  border: 2px solid #0066CC;
+}
+
+.cta-actions .button--primary:hover {
+  background: #004499;
+  border-color: #004499;
+  transform: translateY(-2px);
+}
+
+.cta-actions .button--secondary {
+  background: transparent;
+  color: #0066CC;
+  border: 2px solid #0066CC;
+}
+
+.cta-actions .button--secondary:hover {
+  background: #0066CC;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background: #f8f9fa;
+  padding: 3rem 2rem;
+  margin: 3rem -1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.testimonial-section blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #333;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-section cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #0066CC;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Team Page Styling */
+.team-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0 4rem 0;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.avatar {
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+  border-radius: 50%;
+}
+
+.avatar-initials {
+  position: relative;
+  z-index: 1;
+}
+
+/* Individual avatar styles */
+.nexus-prime {
+  background: linear-gradient(135deg, #0066CC 0%, #004499 100%);
+}
+
+.velocity {
+  background: linear-gradient(135deg, #00CC66 0%, #00AA55 100%);
+}
+
+.pixel {
+  background: linear-gradient(135deg, #FF6600 0%, #CC4400 100%);
+}
+
+.cipher {
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+}
+
+.rocket {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+}
+
+.testa {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+}
+
+.sage {
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+}
+
+.focus {
+  background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);
+}
+
+.qc-agent {
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+}
+
+.member-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #0066CC;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.focus {
+  color: #666;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill {
+  background: #f0f9ff;
+  color: #0066CC;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid #e0f2fe;
+}
+
+/* Dark mode support with improved contrast */
+[data-theme='dark'] .feature-card {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: white;
+}
+
+[data-theme='dark'] .feature-card p {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .feature-card h3 {
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .cta-section {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+}
+
+[data-theme='dark'] .cta-section h2 {
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .cta-section p {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .testimonial-section {
+  background: #2d3748;
+}
+
+[data-theme='dark'] .testimonial-section blockquote {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .team-member {
+  background: #2d3748;
+  color: white;
+}
+
+[data-theme='dark'] .member-info h3 {
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .role {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .focus {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .skill {
+  background: #1e3a8a;
+  color: #93c5fd;
+  border-color: #1e40af;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-stats {
+    gap: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .team-member {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .avatar {
+    align-self: center;
+  }
+  
+  .team-stats {
+    gap: 2rem;
+  }
+}

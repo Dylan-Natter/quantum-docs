@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkquantum_platform_docs=self.webpackChunkquantum_platform_docs||[]).push([[957],{936:a=>{a.exports=JSON.parse('{"name":"docusaurus-theme-search-algolia","id":"default"}')}}]);
