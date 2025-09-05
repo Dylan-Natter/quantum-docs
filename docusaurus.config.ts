@@ -23,7 +23,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Dylan-Natter', // Usually your GitHub org/user name.
-  projectName: 'quantum-platform-docs', // Usually your repo name.
+  projectName: 'quantum-docs', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
