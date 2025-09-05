@@ -22,7 +22,7 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'centrex-ai', // Usually your GitHub org/user name.
+  organizationName: 'Dylan-Natter', // Usually your GitHub org/user name.
   projectName: 'quantum-platform-docs', // Usually your repo name.
 
   onBrokenLinks: 'warn',
@@ -47,21 +47,6 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/your-org/project-docs/tree/main/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -100,7 +85,11 @@ const config: Config = {
           position: 'left',
           label: 'Guides',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {
+          to: '/docs/team/org-chart',
+          label: 'Team',
+          position: 'left',
+        },
         {
           href: 'https://github.com/Dylan-Natter/quantum-platform',
           label: 'GitHub',
@@ -155,10 +144,6 @@ const config: Config = {
             {
               label: 'GitHub',
               href: 'https://github.com/Dylan-Natter/quantum-platform',
-            },
-            {
-              label: 'Documentation',
-              href: 'https://github.com/centrex-ai/quantum-platform-docs',
             },
           ],
         },

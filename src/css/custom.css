@@ -1,4 +1,41 @@
-/* Custom CSS for Quantum Platform Marketing Site */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #0066CC;
+  --ifm-color-primary-dark: #004499;
+  --ifm-color-primary-darker: #003366;
+  --ifm-color-primary-darkest: #002244;
+  --ifm-color-primary-light: #3388DD;
+  --ifm-color-primary-lighter: #4D99EE;
+  --ifm-color-primary-lightest: #66AAFF;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Improve contrast for better readability */
+  --ifm-color-content: #e2e8f0;
+  --ifm-color-content-secondary: #a0aec0;
+  --ifm-heading-color: #f7fafc;
+  --ifm-font-color-base: #e2e8f0;
+  --ifm-navbar-link-color: #e2e8f0;
+  --ifm-footer-link-color: #a0aec0;
+}
 
 /* Hero Section Styling */
 .hero-section {
@@ -249,62 +286,6 @@
   font-style: normal;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.25rem;
-  }
-  
-  .hero-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .hero-stats {
-    gap: 2rem;
-  }
-  
-  .stat-number {
-    font-size: 2rem;
-  }
-  
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .cta-actions {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Dark mode support */
-[data-theme='dark'] .feature-card {
-  background: #2d3748;
-  border-color: #4a5568;
-  color: white;
-}
-
-[data-theme='dark'] .feature-card p {
-  color: #a0aec0;
-}
-
-[data-theme='dark'] .cta-section {
-  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
-}
-
-[data-theme='dark'] .testimonial-section {
-  background: #2d3748;
-}
-
-[data-theme='dark'] .testimonial-section blockquote {
-  color: white;
-}
-
 /* Team Page Styling */
 .team-stats {
   display: flex;
@@ -398,6 +379,10 @@
   background: linear-gradient(135deg, #EC4899 0%, #DB2777 100%);
 }
 
+.qc-agent {
+  background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+}
+
 .member-info h3 {
   margin: 0 0 0.5rem 0;
   color: #0066CC;
@@ -434,7 +419,41 @@
   border: 1px solid #e0f2fe;
 }
 
-/* Dark mode team styling */
+/* Dark mode support with improved contrast */
+[data-theme='dark'] .feature-card {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: white;
+}
+
+[data-theme='dark'] .feature-card p {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .feature-card h3 {
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .cta-section {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+}
+
+[data-theme='dark'] .cta-section h2 {
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .cta-section p {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .testimonial-section {
+  background: #2d3748;
+}
+
+[data-theme='dark'] .testimonial-section blockquote {
+  color: #e2e8f0;
+}
+
 [data-theme='dark'] .team-member {
   background: #2d3748;
   color: white;
@@ -458,8 +477,38 @@
   border-color: #1e40af;
 }
 
-/* Responsive team layout */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-stats {
+    gap: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .team-member {
     flex-direction: column;
     text-align: center;

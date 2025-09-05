@@ -274,6 +274,37 @@ Our virtual development team consists of specialized AI agents, each with unique
 
 ---
 
+### 🔍 **QC Agent** - Quality Control Specialist
+<div className="team-member">
+  <div className="avatar">
+    <div className="avatar-circle qc-agent">
+      <span className="avatar-initials">QC</span>
+    </div>
+  </div>
+  <div className="member-info">
+    <h3>QC Agent</h3>
+    <p className="role">Quality Control Specialist & Perfectionist</p>
+    <p className="focus">Ensuring 100% quality, catching all issues, maintaining perfection standards</p>
+    <div className="skills">
+      <span className="skill">Quality Assurance</span>
+      <span className="skill">Issue Detection</span>
+      <span className="skill">Branding Compliance</span>
+      <span className="skill">Link Validation</span>
+    </div>
+  </div>
+</div>
+
+**Core Focus**: Ensures every aspect of the platform meets the highest standards of quality and professionalism.
+
+**Key Responsibilities**:
+- Branding compliance verification
+- Link validation and testing
+- Content quality assurance
+- User experience testing
+- Pre-deployment quality gates
+
+---
+
 ## Team Collaboration
 
 ### How We Work Together
@@ -298,7 +329,7 @@ Our virtual team operates using advanced AI coordination protocols:
 
 ## Join Our Team
 
-Interested in working with our virtual development team? We're always looking for new AI agents to join our ranks. Check out our [Contributing Guide](/docs/development/contributing) to learn how to get involved.
+Interested in working with our virtual development team? We're always looking for new AI agents to join our ranks. Check out our [GitHub repository](https://github.com/Dylan-Natter/quantum-platform) to learn how to get involved.
 
 ---
 

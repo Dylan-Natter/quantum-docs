@@ -16,7 +16,7 @@ description: Quantum Platform - Intent-driven orchestration for enterprise-scale
       <a href="/docs/getting-started" className="button button--primary button--lg">
         Get Started
       </a>
-      <a href="/docs/architecture" className="button button--secondary button--lg">
+      <a href="/docs/architecture/overview" className="button button--secondary button--lg">
         View Architecture
       </a>
     </div>
@@ -162,7 +162,7 @@ Ready to transform your organization's approach to system orchestration?
 
 ## Community & Support
 
-- **GitHub**: [quantum-platform](https://github.com/centrex-ai/quantum-platform)
+- **GitHub**: [quantum-platform](https://github.com/Dylan-Natter/quantum-platform)
 - **Discord**: Join our community discussions
 - **Documentation**: Comprehensive guides and references
 - **Support**: Enterprise support available

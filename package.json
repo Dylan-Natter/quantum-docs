@@ -66,7 +66,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/centrex-ai/quantum-platform-docs.git"
+    "url": "https://github.com/Dylan-Natter/quantum-platform.git"
   },
   "keywords": [
     "documentation",
@@ -75,6 +75,6 @@
     "user-guides",
     "technical-documentation"
   ],
-  "author": "Centrex AI",
+  "author": "centrex.AI",
   "license": "MIT"
 }
