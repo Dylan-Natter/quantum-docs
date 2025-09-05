@@ -102,7 +102,7 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/centrex-ai/quantum-platform',
+          href: 'https://github.com/Dylan-Natter/quantum-platform',
           label: 'GitHub',
           position: 'right',
         },
@@ -149,12 +149,12 @@ const config: Config = {
           title: 'Company',
           items: [
             {
-              label: 'Centrex AI',
+              label: 'centrex.AI',
               href: 'https://centrex.ai',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/centrex-ai/quantum-platform',
+              href: 'https://github.com/Dylan-Natter/quantum-platform',
             },
             {
               label: 'Documentation',
@@ -163,7 +163,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Centrex AI. All rights reserved.`,
+      copyright: `Copyright © ${new Date().getFullYear()} centrex.AI. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
