@@ -4,21 +4,36 @@ title: Introduction
 description: Welcome to Quantum Platform - Intent-driven orchestration for enterprise-scale deployment
 ---
 
-# Welcome to Quantum Platform
+# Quantum Platform by Centrex AI
 
 <div className="hero-section">
   <div className="hero-content">
-    <h1 className="hero-title">Intent-Driven Orchestration</h1>
+    <h1 className="hero-title">Transform Your Enterprise with Intent-Driven Orchestration</h1>
     <p className="hero-subtitle">
-      Enterprise-scale platform that transforms how organizations build, deploy, and manage complex systems through declarative intent specifications.
+      The next-generation platform that revolutionizes how organizations build, deploy, and manage complex systems. 
+      Declare what you want to achieve, not how to achieve it.
     </p>
     <div className="hero-actions">
       <a href="/docs/getting-started/quick-start" className="button button--primary button--lg">
-        Get Started
+        Start Building
       </a>
       <a href="/docs/architecture/overview" className="button button--secondary button--lg">
-        View Architecture
+        See How It Works
       </a>
+    </div>
+    <div className="hero-stats">
+      <div className="stat">
+        <div className="stat-number">99.9%</div>
+        <div className="stat-label">Uptime SLA</div>
+      </div>
+      <div className="stat">
+        <div className="stat-number">&lt;200ms</div>
+        <div className="stat-label">API Response</div>
+      </div>
+      <div className="stat">
+        <div className="stat-number">10K+</div>
+        <div className="stat-label">Concurrent Users</div>
+      </div>
     </div>
   </div>
 </div>

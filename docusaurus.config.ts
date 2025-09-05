@@ -129,37 +129,41 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Platform',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Architecture Overview',
+              href: '/docs/architecture/overview',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'API Reference',
+              href: '/docs/api-reference/overview',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Quick Start',
+              href: '/docs/getting-started/quick-start',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Company',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Centrex AI',
+              href: 'https://centrex.ai',
             },
             {
               label: 'GitHub',
               href: 'https://github.com/centrex-ai/quantum-platform',
             },
+            {
+              label: 'Documentation',
+              href: 'https://github.com/centrex-ai/quantum-platform-docs',
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Centrex AI. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Centrex AI. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
