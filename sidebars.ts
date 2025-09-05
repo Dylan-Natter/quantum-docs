@@ -9,6 +9,7 @@ const sidebars: SidebarsConfig = {
       label: 'Architecture',
       items: [
         'architecture/overview',
+        'architecture/tutorial',
       ],
     },
     {
